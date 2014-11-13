@@ -54,8 +54,8 @@ install -d $RPM_BUILD_ROOT/%{patdir}/%{category}/suma21all
 install -d $RPM_BUILD_ROOT/%{patdir}/%{category}/suma17all
 install -d $RPM_BUILD_ROOT/usr/share/doc/packages/%{sca_common}
 install -m 444 patterns/COPYING.GPLv2 $RPM_BUILD_ROOT/usr/share/doc/packages/%{sca_common}
-install -m %{mode} patterns/%{category}/oes11all/* $RPM_BUILD_ROOT/%{patdir}/%{category}/suma21all
-install -m %{mode} patterns/%{category}/oes11sp1/* $RPM_BUILD_ROOT/%{patdir}/%{category}/suma17all
+install -m %{mode} patterns/%{category}/suma21all/* $RPM_BUILD_ROOT/%{patdir}/%{category}/suma21all
+install -m %{mode} patterns/%{category}/suma17all/* $RPM_BUILD_ROOT/%{patdir}/%{category}/suma17all
 %fdupes %{buildroot}
 
 %files
