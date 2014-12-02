@@ -2,7 +2,7 @@
 
 # Title:       Jabberd Initialization Failure
 # Description: db: couldn't open environment: Resource temporarily unavailable
-# Modified:    2014 Nov 13
+# Modified:    2014 Dec 02
 #
 ##############################################################################
 # Copyright (C) 2014 SUSE LLC
@@ -32,6 +32,7 @@
 import re
 import os
 import Core
+import suma
 
 ##############################################################################
 # Overriden (eventually or in part) from SDP::Core Module
@@ -51,27 +52,6 @@ Core.init(META_CLASS, META_CATEGORY, META_COMPONENT, PATTERN_ID, PRIMARY_LINK, O
 ##############################################################################
 # Local Function Definitions
 ##############################################################################
-
-def jabberdRunning():
-	fileOpen = "basic-health-check.txt"
-	section = "/ps a"
-	content = {}
-	COUNT = 0
-	if Core.getSection(fileOpen, section, content):
-		for line in content:
-			STR = content[line].lower()
-			if "/usr/bin/router " in STR:
-				COUNT += 1
-			elif "/usr/bin/sm " in STR:
-				COUNT += 1
-			elif "/usr/bin/c2s " in STR:
-				COUNT += 1
-			elif "/usr/bin/s2s " in STR:
-				COUNT += 1
-	if( COUNT == 4 ):
-		return True
-	else:
-		return False
 
 def errorsFound():
 	fileOpen = "messages.txt"
@@ -98,7 +78,7 @@ def errorsFound():
 # Main Program Execution
 ##############################################################################
 
-if( jabberdRunning() ):
+if( suma.jabberdRunning() ):
 	Core.updateStatus(Core.IGNORE, "Jabberd is running, not applicable")
 else:
 	if( errorsFound() ):

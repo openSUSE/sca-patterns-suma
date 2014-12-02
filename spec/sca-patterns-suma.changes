@@ -1,4 +1,11 @@
 -------------------------------------------------------------------
+Tue Dec  2 23:00:59 UTC 2014 - jrecord@suse.com
+
+- Changed suma17all/jabberd-7015878.py to use suma library
+- New Pattern
+  suma17all/spacewalk-branding_SUSE-SU-2014_1394-1_1.7.py
+
+-------------------------------------------------------------------
 Thu Nov 13 23:17:47 UTC 2014 - jrecord@suse.com
 
 - New Patterns
