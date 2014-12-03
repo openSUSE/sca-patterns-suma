@@ -1,4 +1,24 @@
 -------------------------------------------------------------------
+Wed Dec  3 22:02:44 UTC 2014 - jrecord@suse.com
+
+- New Patterns
+  suma17all/bash_SUSE-SU-2014_1223-1_suma-1.7.py
+  suma17all/bash_SUSE-SU-2014_1247-2_suma-1.7.py
+  suma17all/gnutls_SUSE-SU-2014_0445-1_suma-1.7.py
+  suma17all/gnutls_SUSE-SU-2014_0758-2_suma-1.7.py
+  suma17all/java_SUSE-SU-2014_0451-1_suma-1.7.py
+  suma17all/java_SUSE-SU-2014_0728-1_suma-1.7.py
+  suma17all/java_SUSE-SU-2014_1526-2_suma-1.7.py
+  suma17all/openssl-certs_SUSE-SU-2014_0444-1_suma-1.7.py
+  suma17all/openssl_SUSE-SU-2014_1387-2_suma-1.7.py
+  suma17all/oracle-update_SUSE-SU-2014_0130-1_suma-1.7.py
+  suma17all/spacewalk-java_SUSE-SU-2014_1339-1_suma-1.7.py
+  suma17all/struts_SUSE-SU-2014_0902-1_suma-1.7.py
+  suma21all/spacewalk-java_SUSE-SU-2014_1218-1_suma-2.1.py
+  suma21all/spacewalk-java_SUSE-SU-2014_1342-1_suma-2.1.py
+  suma21all/struts_SUSE-SU-2014_0902-1_suma-2.1.py
+
+-------------------------------------------------------------------
 Tue Dec  2 23:00:59 UTC 2014 - jrecord@suse.com
 
 - Changed suma17all/jabberd-7015878.py to use suma library
