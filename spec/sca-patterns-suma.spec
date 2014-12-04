@@ -26,7 +26,7 @@ Group:        System/Monitoring
 License:      GPL-2.0
 Autoreqprov:  on
 Version:      1.0
-Release:      3
+Release:      6
 Source:       %{name}-%{version}.tar.gz
 BuildRoot:    %{_tmppath}/%{name}-%{version}
 Buildarch:    noarch
@@ -37,10 +37,6 @@ Requires:     sca-patterns-base
 Supportconfig Analysis (SCA) appliance patterns to identify known
 issues relating to all versions of SUSE Manager (SUMA)
 
-Authors:
---------
-    Jason Record <jrecord@suse.com>
-
 %prep
 %setup -q
 
@@ -50,12 +46,14 @@ Authors:
 pwd;ls -la
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT/%{patdir}/%{category}
-install -d $RPM_BUILD_ROOT/%{patdir}/%{category}/suma21all
+install -d $RPM_BUILD_ROOT/%{patdir}/%{category}/suma12all
 install -d $RPM_BUILD_ROOT/%{patdir}/%{category}/suma17all
+install -d $RPM_BUILD_ROOT/%{patdir}/%{category}/suma21all
 install -d $RPM_BUILD_ROOT/usr/share/doc/packages/%{sca_common}
 install -m 444 patterns/COPYING.GPLv2 $RPM_BUILD_ROOT/usr/share/doc/packages/%{sca_common}
-install -m %{mode} patterns/%{category}/suma21all/* $RPM_BUILD_ROOT/%{patdir}/%{category}/suma21all
+install -m %{mode} patterns/%{category}/suma12all/* $RPM_BUILD_ROOT/%{patdir}/%{category}/suma12all
 install -m %{mode} patterns/%{category}/suma17all/* $RPM_BUILD_ROOT/%{patdir}/%{category}/suma17all
+install -m %{mode} patterns/%{category}/suma21all/* $RPM_BUILD_ROOT/%{patdir}/%{category}/suma21all
 %fdupes %{buildroot}
 
 %files
@@ -63,12 +61,14 @@ install -m %{mode} patterns/%{category}/suma17all/* $RPM_BUILD_ROOT/%{patdir}/%{
 %dir %{patdirbase}
 %dir %{patdir}
 %dir %{patdir}/%{category}
-%dir %{patdir}/%{category}/suma21all
+%dir %{patdir}/%{category}/suma12all
 %dir %{patdir}/%{category}/suma17all
+%dir %{patdir}/%{category}/suma21all
 %dir /usr/share/doc/packages/%{sca_common}
 %doc %attr(-,root,root) /usr/share/doc/packages/%{sca_common}/*
-%attr(%{mode},%{patuser},%{patgrp}) %{patdir}/%{category}/suma21all/*
+%attr(%{mode},%{patuser},%{patgrp}) %{patdir}/%{category}/suma12all/*
 %attr(%{mode},%{patuser},%{patgrp}) %{patdir}/%{category}/suma17all/*
+%attr(%{mode},%{patuser},%{patgrp}) %{patdir}/%{category}/suma21all/*
 
 %clean
 rm -rf $RPM_BUILD_ROOT

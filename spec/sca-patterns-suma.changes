@@ -1,4 +1,16 @@
 -------------------------------------------------------------------
+Thu Dec  4 23:14:36 UTC 2014 - jrecord@suse.com
+
+- New Patterns
+  suma12all/manager_SUSE-SU-2013_0841-1_suma-1.2.py
+  suma12all/oracle-update_SUSE-SU-2013_0811-1_suma-1.2.py
+  suma12all/oracle-update_SUSE-SU-2013_1448-1_suma-1.2.py
+  suma17all/manager_SUSE-SU-2013_0841-1_suma-1.7.py
+  suma17all/oracle-update_SUSE-SU-2013_0810-1_suma-1.7.py
+  suma17all/oracle-update_SUSE-SU-2013_1448-1_suma-1.7.py
+  suma17all/spacewalk-java_SUSE-SU-2013_1661-1_suma-1.7.py
+
+-------------------------------------------------------------------
 Wed Dec  3 22:02:44 UTC 2014 - jrecord@suse.com
 
 - New Patterns
