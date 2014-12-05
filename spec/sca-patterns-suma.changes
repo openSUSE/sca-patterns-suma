@@ -1,4 +1,15 @@
 -------------------------------------------------------------------
+Fri Dec  5 20:16:43 UTC 2014 - jrecord@suse.com
+
+- New Patterns
+  suma12all/auditlog-keeper_SUSE-SU-2012_0958-1_suma-1.2.py
+  suma12all/cobbler_SUSE-SU-2012_0552-1_suma-1.2.py
+  suma12all/cobbler_SUSE-SU-2012_0814-1_suma-1.2.py
+  suma12all/oracle-update_SUSE-SU-2012_0765-1_suma-1.2.py
+  suma12all/oracle-update_SUSE-SU-2012_1020-1_suma-1.2.py
+  suma17all/oracle-update_SUSE-SU-2012_1020-1_suma-1.7.py
+
+-------------------------------------------------------------------
 Thu Dec  4 23:15:27 UTC 2014 - jrecord@suse.com
 
 - Added SUMA 1.2 directory
