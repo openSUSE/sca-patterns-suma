@@ -1,12 +1,12 @@
 #!/usr/bin/python
 #
-# Title:       Important Security Announcement for spacewalk-branding SUSE-SU-2014:1394-1
+# Title:       Important SUMA Security Announcement for Java SUSE-SU-2015:0343-2
 # Description: Security fixes for SUSE Manager 1.7
-# Source:      SUMA Security Announcement Parser v1.0.0
+# Source:      SUMA Security Announcement Parser v1.0.3
 # Modified:    2015 Feb 26
 #
 ##############################################################################
-# Copyright (C) 2014,2015 SUSE LLC
+# Copyright (C) 2015 SUSE LLC
 ##############################################################################
 #
 # This program is free software; you can redistribute it and/or modify
@@ -33,32 +33,35 @@ import suma
 
 META_CLASS = "Security"
 META_CATEGORY = "SUMA"
-META_COMPONENT = "spacewalk-branding"
+META_COMPONENT = "Java"
 PATTERN_ID = os.path.basename(__file__)
 PRIMARY_LINK = "META_LINK_Security"
 OVERALL = Core.TEMP
 OVERALL_INFO = "NOT SET"
-OTHER_LINKS = "META_LINK_Security=http://lists.opensuse.org/opensuse-security-announce/2014-11/msg00008.html"
+OTHER_LINKS = "META_LINK_Security=http://lists.opensuse.org/opensuse-security-announce/2015-02/msg00032.html"
 Core.init(META_CLASS, META_CATEGORY, META_COMPONENT, PATTERN_ID, PRIMARY_LINK, OVERALL, OVERALL_INFO, OTHER_LINKS)
 
 LTSS = False
-NAME = 'spacewalk-branding'
+NAME = 'Java'
 MAIN = ''
 SEVERITY = 'Important'
-TAG = 'SUSE-SU-2014:1394-1'
+TAG = 'SUSE-SU-2015:0343-2'
 PACKAGES = {}
 SUMA = suma.getSumaInfo()
 
 if ( SUMA['Installed'] ):
 	if ( SUMA['Version'] == '1.7' ):
 		PACKAGES = {
-			'spacewalk-branding': '1.7.1.12-0.5.1',
+			'java-1_6_0-ibm': '1.6.0_sr16.3-0.4.1',
+			'java-1_6_0-ibm-devel': '1.6.0_sr16.3-0.4.1',
+			'java-1_6_0-ibm-fonts': '1.6.0_sr16.3-0.4.1',
+			'java-1_6_0-ibm-jdbc': '1.6.0_sr16.3-0.4.1',
+			'java-1_6_0-ibm-plugin': '1.6.0_sr16.3-0.4.1',
 		}
 		SUSE.securityAnnouncementPackageCheck(NAME, MAIN, LTSS, SEVERITY, TAG, PACKAGES)
 	else:
 		Core.updateStatus(Core.ERROR, "ERROR: " + NAME + " Security Announcement: Outside the SUMA version scope")
 else:
-	Core.updateStatus(Core.ERROR, "ERROR: SUSE Manager not installed")
-
+	Core.updateStatus(Core.ERROR, "ERROR: " + NAME + " Security Announcement: SUMA Not Installed")
 Core.printPatternResults()
 

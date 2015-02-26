@@ -1,4 +1,11 @@
 -------------------------------------------------------------------
+Thu Feb 26 14:52:01 UTC 2015 - jrecord@suse.com
+
+- New Pattern
+  suma17all/java_SUSE-SU-2015_0343-2_suma-1.7.py
+- Fixed updateStatus for suma17all/spacewalk-branding_SUSE-SU-2014_1394-1_1.7.py
+
+-------------------------------------------------------------------
 Fri Dec  5 21:57:28 UTC 2014 - jrecord@suse.com
 
 - New Patterns
