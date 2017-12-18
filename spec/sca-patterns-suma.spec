@@ -1,15 +1,16 @@
+# 
 # spec file for package sca-patterns-suma
 #
-# Copyright (C) 2014 SUSE LLC
+# Copyright (c) 2017 SUSE LINUX GmbH, Nuernberg, Germany.
 #
-# This file and all modifications and additions to the pristine
-# package are under the same license as the package itself.
-#
-# Source developed at:
-#  https://github.com/g23guy/sca-patterns-suma
-#
-# norootforbuild
-# neededforbuild
+# All modifications and additions to the file contributed by third parties
+# remain the property of their copyright owners, unless otherwise agreed
+# upon. The license for this file, and modifications and additions to the
+# file, is the same license as for the pristine package itself (unless the
+# license for the pristine package is not an Open Source License, in which
+# case the license is the MIT License). An "Open Source License" is a
+# license that conforms to the Open Source Definition (Version 1.9)
+# published by the Open Source Initiative.
 
 %define sca_common sca
 %define patdirbase /usr/lib/%{sca_common}
@@ -20,22 +21,22 @@
 %define category suma
 
 Name:         sca-patterns-suma
+Version:      1.0
+Release:      0
 Summary:      Supportconfig Analysis Patterns for SUSE Manager
+License:      GPL-2.0
 URL:          https://github.com/g23guy/sca-patterns-suma
 Group:        System/Monitoring
-License:      GPL-2.0
-Autoreqprov:  on
-Version:      1.0
-Release:      16
 Source:       %{name}-%{version}.tar.gz
-BuildRoot:    %{_tmppath}/%{name}-%{version}
-Buildarch:    noarch
 BuildRequires: fdupes
 Requires:     sca-patterns-base
+Buildarch:    noarch
 
 %description
 Supportconfig Analysis (SCA) appliance patterns to identify known
 issues relating to all versions of SUSE Manager (SUMA)
+
+See %{_docdir}/sca-patterns-base/COPYING.GPLv2
 
 %prep
 %setup -q
@@ -44,16 +45,13 @@ issues relating to all versions of SUSE Manager (SUMA)
 
 %install
 pwd;ls -la
-rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT/%{patdir}/%{category}
-install -d $RPM_BUILD_ROOT/%{patdir}/%{category}/suma12all
-install -d $RPM_BUILD_ROOT/%{patdir}/%{category}/suma17all
-install -d $RPM_BUILD_ROOT/%{patdir}/%{category}/suma21all
-install -d $RPM_BUILD_ROOT/usr/share/doc/packages/%{sca_common}
-install -m 444 patterns/COPYING.GPLv2 $RPM_BUILD_ROOT/usr/share/doc/packages/%{sca_common}
-install -m %{mode} patterns/%{category}/suma12all/* $RPM_BUILD_ROOT/%{patdir}/%{category}/suma12all
-install -m %{mode} patterns/%{category}/suma17all/* $RPM_BUILD_ROOT/%{patdir}/%{category}/suma17all
-install -m %{mode} patterns/%{category}/suma21all/* $RPM_BUILD_ROOT/%{patdir}/%{category}/suma21all
+install -d %{buildroot}/%{patdir}/%{category}
+install -d %{buildroot}/%{patdir}/%{category}/suma12all
+install -d %{buildroot}/%{patdir}/%{category}/suma17all
+install -d %{buildroot}/%{patdir}/%{category}/suma21all
+install -m %{mode} patterns/%{category}/suma12all/* %{buildroot}/%{patdir}/%{category}/suma12all
+install -m %{mode} patterns/%{category}/suma17all/* %{buildroot}/%{patdir}/%{category}/suma17all
+install -m %{mode} patterns/%{category}/suma21all/* %{buildroot}/%{patdir}/%{category}/suma21all
 %fdupes %{buildroot}
 
 %files
@@ -64,14 +62,12 @@ install -m %{mode} patterns/%{category}/suma21all/* $RPM_BUILD_ROOT/%{patdir}/%{
 %dir %{patdir}/%{category}/suma12all
 %dir %{patdir}/%{category}/suma17all
 %dir %{patdir}/%{category}/suma21all
-%dir /usr/share/doc/packages/%{sca_common}
-%doc %attr(-,root,root) /usr/share/doc/packages/%{sca_common}/*
 %attr(%{mode},%{patuser},%{patgrp}) %{patdir}/%{category}/suma12all/*
 %attr(%{mode},%{patuser},%{patgrp}) %{patdir}/%{category}/suma17all/*
 %attr(%{mode},%{patuser},%{patgrp}) %{patdir}/%{category}/suma21all/*
 
 %clean
-rm -rf $RPM_BUILD_ROOT
+rm -rf %{buildroot}
 
 %changelog
 
