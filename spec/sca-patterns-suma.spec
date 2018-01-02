@@ -66,8 +66,5 @@ install -m %{mode} patterns/%{category}/suma21all/* %{buildroot}/%{patdir}/%{cat
 %attr(%{mode},%{patuser},%{patgrp}) %{patdir}/%{category}/suma17all/*
 %attr(%{mode},%{patuser},%{patgrp}) %{patdir}/%{category}/suma21all/*
 
-%clean
-rm -rf %{buildroot}
-
 %changelog
 
