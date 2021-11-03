@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 #
 # Title:       Important SUMA Security Announcement for Manager SUSE-SU-2013:0841-1
 # Description: Security fixes for SUSE Manager 1.2

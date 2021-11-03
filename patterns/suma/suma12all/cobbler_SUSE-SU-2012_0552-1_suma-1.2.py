@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 #
 # Title:       Important SUMA Security Announcement for cobbler SUSE-SU-2012:0552-1
 # Description: Security fixes for SUSE Manager 1.2

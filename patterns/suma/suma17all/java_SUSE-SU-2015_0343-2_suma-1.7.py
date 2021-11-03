@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 #
 # Title:       Important SUMA Security Announcement for Java SUSE-SU-2015:0343-2
 # Description: Security fixes for SUSE Manager 1.7

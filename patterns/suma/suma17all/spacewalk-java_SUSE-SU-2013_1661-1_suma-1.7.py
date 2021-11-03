@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 #
 # Title:       Critical SUMA Security Announcement for spacewalk-java SUSE-SU-2013:1661-1
 # Description: Security fixes for SUSE Manager 1.7

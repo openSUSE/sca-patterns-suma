@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 #
 # Title:       Important Security Announcement for spacewalk-branding SUSE-SU-2014:1394-1
 # Description: Security fixes for SUSE Manager 1.7

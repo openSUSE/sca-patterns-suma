@@ -21,7 +21,7 @@
 %define category suma
 
 Name:         sca-patterns-suma
-Version:      1.0
+Version:      1.5.0
 Release:      0
 Summary:      Supportconfig Analysis Patterns for SUSE Manager
 License:      GPL-2.0

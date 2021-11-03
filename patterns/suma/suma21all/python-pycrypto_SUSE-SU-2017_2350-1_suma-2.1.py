@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 #
 # Title:       Important SUMA Security Announcement for python-pycrypto SUSE-SU-2017:2350-1
 # Description: Security fixes for SUSE Manager 2.1

@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 #
 # Title:       Important SUMA Security Announcement for GnuTLS SUSE-SU-2014:0758-2
 # Description: Security fixes for SUSE Manager 1.7
