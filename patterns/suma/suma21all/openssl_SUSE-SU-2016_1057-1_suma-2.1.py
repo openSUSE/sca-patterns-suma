@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 #
 # Title:       Important SUMA Security Announcement for openssl SUSE-SU-2016:1057-1
 # Description: Security fixes for SUSE Manager 2.1

@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 #
 # Title:       Critical SUMA Security Announcement for bash SUSE-SU-2014:1223-1
 # Description: Security fixes for SUSE Manager 1.7

@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 #
 # Title:       Important SUMA Security Announcement for spacewalk-java SUSE-SU-2014:1218-1
 # Description: Security fixes for SUSE Manager 2.1

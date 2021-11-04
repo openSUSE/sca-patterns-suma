@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 
 # Title:       Jabberd Initialization Failure
 # Description: db: couldn't open environment: Resource temporarily unavailable

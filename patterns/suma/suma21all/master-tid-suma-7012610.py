@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 
 # Title:       Master TID: SUSE Manager
 # Description: Checks if SUSE Manager is installed
