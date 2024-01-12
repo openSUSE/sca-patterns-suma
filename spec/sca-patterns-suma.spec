@@ -1,7 +1,7 @@
 # 
 # spec file for package sca-patterns-suma
 #
-# Copyright (c) 2022 SUSE LLC
+# Copyright (c) 2024 SUSE LLC
 #
 # All modifications and additions to the file contributed by third parties
 # remain the property of their copyright owners, unless otherwise agreed
@@ -17,11 +17,11 @@
 %define patdir %{patdirbase}/patterns
 %define patuser root
 %define patgrp root
-%define mode 544
+%define patmode 755
 %define category suma
 
 Name:         sca-patterns-suma
-Version:      1.5.0
+Version:      1.5.1
 Release:      0
 Summary:      Supportconfig Analysis Patterns for SUSE Manager
 License:      GPL-2.0
@@ -49,9 +49,9 @@ install -d %{buildroot}/%{patdir}/%{category}
 install -d %{buildroot}/%{patdir}/%{category}/suma12all
 install -d %{buildroot}/%{patdir}/%{category}/suma17all
 install -d %{buildroot}/%{patdir}/%{category}/suma21all
-install -m %{mode} patterns/%{category}/suma12all/* %{buildroot}/%{patdir}/%{category}/suma12all
-install -m %{mode} patterns/%{category}/suma17all/* %{buildroot}/%{patdir}/%{category}/suma17all
-install -m %{mode} patterns/%{category}/suma21all/* %{buildroot}/%{patdir}/%{category}/suma21all
+install -m %{patmode} patterns/%{category}/suma12all/* %{buildroot}/%{patdir}/%{category}/suma12all
+install -m %{patmode} patterns/%{category}/suma17all/* %{buildroot}/%{patdir}/%{category}/suma17all
+install -m %{patmode} patterns/%{category}/suma21all/* %{buildroot}/%{patdir}/%{category}/suma21all
 %fdupes %{buildroot}
 
 %files
@@ -62,9 +62,9 @@ install -m %{mode} patterns/%{category}/suma21all/* %{buildroot}/%{patdir}/%{cat
 %dir %{patdir}/%{category}/suma12all
 %dir %{patdir}/%{category}/suma17all
 %dir %{patdir}/%{category}/suma21all
-%attr(%{mode},%{patuser},%{patgrp}) %{patdir}/%{category}/suma12all/*
-%attr(%{mode},%{patuser},%{patgrp}) %{patdir}/%{category}/suma17all/*
-%attr(%{mode},%{patuser},%{patgrp}) %{patdir}/%{category}/suma21all/*
+%attr(%{patmode},%{patuser},%{patgrp}) %{patdir}/%{category}/suma12all/*
+%attr(%{patmode},%{patuser},%{patgrp}) %{patdir}/%{category}/suma17all/*
+%attr(%{patmode},%{patuser},%{patgrp}) %{patdir}/%{category}/suma21all/*
 
 %changelog
 
